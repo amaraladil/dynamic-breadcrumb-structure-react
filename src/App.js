@@ -127,10 +127,11 @@ const Navigation = props => {
 export const RoutingSection = () => {
   return (
     <Switch>
-      <Route exact path="/">
+      {/* <Route exact path="/">
         <Redirect to="/path" />
-      </Route>
+      </Route> */}
       <Route path={`/path`} render={props => <Navigation {...props} />} />
+      <Redirect to="/path" />
     </Switch>
   );
 };
